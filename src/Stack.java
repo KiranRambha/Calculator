@@ -5,11 +5,14 @@ import java.util.ArrayList;
  * @author kiran
  *
  */
-//JavaDoc comments for the classes
 public class Stack {
-	private ArrayList<Entry> list = new ArrayList<Entry>();
+	private ArrayList<Entry> list;
 	private  int size = 0;
 	
+	
+	public Stack() {
+		list = new ArrayList<Entry>();
+	}
 	/**
 	 * Pusing an Object of Entry class to the stack and
 	 * increases the size of the stack
@@ -29,7 +32,7 @@ public class Stack {
 	 * @throws EmptyStackException throws this Exception 
 	 * if popping is done on an empty stack
 	 */
-	public final Entry pop() throws EmptyStackException {
+	public Entry pop() throws EmptyStackException {
 		size--;
 		if (size >= 0) {
 			return list.remove(size);
@@ -48,9 +51,9 @@ public class Stack {
 	public final Entry top() throws EmptyStackException {
 		if (size > 0) {
 			return list.get(size - 1);
-		} else if (size == 0) {
+		} /*else if (size == 0) {
 			return list.get(size);
-		} else {
+		}*/ else {
 			throw new EmptyStackException();
 		}
 	}
