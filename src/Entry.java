@@ -15,10 +15,11 @@ public class Entry {
 	 * 
 	 * @param number is a float value
 	 */
-	public Entry(final float number) {
+	public Entry(float number) {
 		this.symbol = Symbol.INVALID;
 		this.number = number;
 		this.type = Type.NUMBER;
+		this.string = null;
 	}	
 
 	/**
@@ -27,9 +28,10 @@ public class Entry {
 	 * 
 	 * @param symbol is the symbol that is entered
 	 */
-	public Entry(final Symbol symbol)  {
+	public Entry(Symbol symbol)  {
 		this.symbol = symbol;
 		this.type = Type.SYMBOL;
+		this.string = null;
 	}
 
 	/**
@@ -48,9 +50,12 @@ public class Entry {
 	 * If there is no parameter entered then it 
 	 * the type is invalid
 	 */
+	@SuppressWarnings("null")
 	public Entry() {
 		this.type = Type.INVALID;
 		this.symbol = Symbol.INVALID;
+		this.string = null;
+		this.number = (Integer) null;
 	}
 
 	/**
