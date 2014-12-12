@@ -1,36 +1,67 @@
-
+/**
+ * 
+ * @author Kiran Rambha
+ * StrStack class implements the Stack class 
+ * but only accepts String in its Stack.
+ */
 public class StrStack {
 	
-	Stack strstack = new Stack();
+	/**
+	 * An object of the Stack class.
+	 */
+	private Stack strstack = new Stack();
 	
-	public void push(String string) {
+	/**
+	 * Pushes a given string onto the stack.
+	 * @param string the string that is given 
+	 * as a parameter that is to be pushed onto the Stack
+	 */
+	public final void push(final String string) {
 		Entry entry = new Entry(string);
 		strstack.push(entry);
 	}
 
-	public String top() {
+	/**
+	 * Returns the string that is on the top of the String stack.
+	 * @return returns the string on the top of the stack
+	 */
+	public final String top() {
 		try {
 			return strstack.top().getString();
 		} catch (BadTypeException | EmptyStackException e) {
-			System.out.println("Error detected, The Stack is empty or a Bad call has been made");
+			System.out.println("Error detected, "
+					+ "The Stack is empty or a Bad call has been made");
 			return null;
 		}
 	}
 
-	public String pop() {
+	/**
+	 * 
+	 * @return pops and returns the top value on the stack.
+	 */
+	public final String pop() {
 		try {
 			return strstack.pop().getString();
 		} catch (BadTypeException | EmptyStackException e) {
-			System.out.println("Error detected, Either the stack has gone empty or a Bad call has been made");
+			System.out.println("Error detected, Either the "
+					+ "stack has gone empty or a Bad call has been made");
 			return null;
 		}
 	}
 
-	public boolean isEmpty() {
-		return strstack.size() > 0 ? false : true;
+	/**
+	 * 
+	 * @return returns false if the stack is empty else returns false.
+	 */
+	public final boolean isEmpty() {
+		return !(strstack.size() > 0);
 	}
 	
-	public int size(){
-		return strstack.size();
+	/**
+	 * 
+	 * @return returns the size of the stack 
+	 */
+	public final int size() {
+		return strstack.size(); 
 	}
 }

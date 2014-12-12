@@ -3,52 +3,68 @@
  *
  */
 public class Entry {
+	
+	/**
+	 * A float variable to store a float.
+	 */
 	private float number;
+	
+	/**
+	 * A Object of enum class Symbol.
+	 */
 	private Symbol symbol;
+	
+	/**
+	 * A String variable to store a string.
+	 */
 	private String string;
+	
+	/**
+	 * A Object of enum class Type.
+	 */
 	private Type type;
 	
 	
 	/**
 	 * Takes a float and initialises number and sets the type to Number
-	 * and the Symbol to invalid
-	 * 
-	 * @param number is a float value
+	 * and the Symbol to invalid.
+	 *  
+	 * @param figure is a float value
 	 */
-	public Entry(float number) {
+	public Entry(final float figure) {
 		this.symbol = Symbol.INVALID;
-		this.number = number;
+		this.number = figure;
 		this.type = Type.NUMBER;
 		this.string = null;
 	}	
 
 	/**
 	 * Takes an symbol and initialises local variable symbol 
-	 * and sets the type to Symbol
+	 * and sets the type to Symbol.
 	 * 
-	 * @param symbol is the symbol that is entered
+	 * @param sign is the symbol that is entered
 	 */
-	public Entry(Symbol symbol)  {
-		this.symbol = symbol;
+	public Entry(final Symbol sign)  {
+		this.symbol = sign;
 		this.type = Type.SYMBOL;
 		this.string = null;
 	}
 
 	/**
 	 * Takes an string as argument and initialises string variable 
-	 * and sets the type to string and symbol to invalid
+	 * and sets the type to string and symbol to invalid.
 	 * 
-	 * @param string is the character entered
+	 * @param strand is the character entered
 	 */
-	public Entry(final String string) {
+	public Entry(final String strand) {
 		this.symbol = Symbol.INVALID;
-		this.string = string;
+		this.string = strand;
 		this.type = Type.STRING;
 	}
 	
 	/**
 	 * If there is no parameter entered then it 
-	 * the type is invalid
+	 * the type is invalid.
 	 */
 	@SuppressWarnings("null")
 	public Entry() {

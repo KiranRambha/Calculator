@@ -2,24 +2,20 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * 
- */
-
-/**
  * @author kiran
  *
  */
 public class TestStack {
 	/**
 	 * When we declare an object stack of class Stack then eclipse
-	 * gives an error saying that there is no Class Stack, So if we hover 
+	 * gives an error saying that there is no Class Stack, So if we hover  
 	 * over the error and select create a class stack then it will create
 	 * a class Stack for us.
 	 */
 	private Stack stack;
 
 	/**
-	 * Here we are initialising the stack object with the Stack class
+	 * Here we are initialising the stack object with the Stack class.
 	 */
 	@Before
 	public final  void setUp() {
@@ -36,7 +32,7 @@ public class TestStack {
 	 * in the stack class and it will create a method push in the stack class
 	 * we also write stack.top() in this method which is also not present in 
 	 * the stack class so we use intellisense to add the method top() in the 
-	 * stack class
+	 * stack class 
 	 */
 	/*@Test
 	public final void pushThenTop() {
@@ -253,7 +249,7 @@ public class TestStack {
 	
 	/**
 	 * Test10 : Pushing a symbol on a stack and 
-	 * checking is the stack is accepting and new entry
+	 * checking is the stack is accepting and new entry.
 	 * 
 	 */
 	@Test
@@ -285,10 +281,11 @@ public class TestStack {
 	@Test
 	public final void pushAndPopStack() 
 			throws EmptyStackException, BadTypeException {
+		final int integer = 4;
 		Entry entry1 = new Entry(1);
 		Entry entry2 = new Entry("This is a stack");
 		Entry entry3 = new Entry(Symbol.PLUS);
-		Entry entry4 = new Entry(4);
+		Entry entry4 = new Entry(integer);
 		stack.push(entry1);
 		stack.push(entry2);
 		stack.push(entry3);
@@ -313,7 +310,7 @@ public class TestStack {
 	
 	/**
 	 * Test12 : Pushing elements onto the stack and popping more element from
-	 * the stack to raise EmptyStackException
+	 * the stack to raise EmptyStackException.
 	 * 
 	 * @throws EmptyStackException Throws EmptyStackException 
 	 * if a pop is called on an empty stack
@@ -324,11 +321,11 @@ public class TestStack {
 	@Test (expected = EmptyStackException.class)
 	public final void pushAndExtraPop() 
 			throws EmptyStackException, BadTypeException {
-		
+		final int integer = 4;
 		Entry entry1 = new Entry(1);
 		Entry entry2 = new Entry("This is a stack");
 		Entry entry3 = new Entry(Symbol.PLUS);
-		Entry entry4 = new Entry(4);
+		Entry entry4 = new Entry(integer);
 		stack.push(entry1);
 		stack.push(entry2);
 		stack.push(entry3);

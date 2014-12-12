@@ -23,8 +23,20 @@ public class TestEntry {
 	 * with a string message.
 	 */
 	private Entry numberEntry, symbolEntry, stringEntry;
+	
+	/**
+	 * Initialise number variable to 1.
+	 */
 	private float number = (float) 1;
-	private Symbol symbol = Symbol.DIVIDE;
+	
+	/**
+	 * Initialise the symbol variable to Divide.
+	 */
+	private Symbol symbol = Symbol.DIVIDE;  
+	
+	/**
+	 * Initialise the String variable.
+	 */
 	private String string = "This is a test Message";
 	
 	
